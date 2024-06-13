@@ -1,6 +1,5 @@
 //consumindo el API para acceder a los datos de la base de datos
-
-let url="http://localhost:8080/storeapi/v1/producto"
+let url="http://localhost:8080/storeapi/v1/usuario"
 
 let peticion={
     method:"GET",
@@ -16,18 +15,18 @@ fetch(url,peticion)
     //RECORRIENDO LA RESPUESTA PARA HACER RENDER
     let fila=document.getElementById("fila")
 
-    respuesta.forEach(function(producto){
+    respuesta.forEach(function(usuario){
         let columna=document.createElement("div")
         columna.classList.add("col")
         let tarjeta=document.createElement("div")
         tarjeta.classList.add("card","shadow", "h-100")
         let imagen=document.createElement("img")
         imagen.classList.add("img-fluid")
-        imagen.src=producto.foto
+        imagen.src=usuario.//
 
         let nombreProducto=document.createElement("h5")
         nombreProducto.classList.add("text-center")
-        nombreProducto.textContent=producto.nombre 
+        nombreProducto.textContent=usuario.nombre 
 
 
         tarjeta.appendChild(imagen)
