@@ -1,4 +1,5 @@
 //consumindo el API para acceder a los datos de la base de datos
+
 let url="http://localhost:8080/storeapi/v1/usuario"
 
 let peticion={
@@ -20,17 +21,23 @@ fetch(url,peticion)
         columna.classList.add("col")
         let tarjeta=document.createElement("div")
         tarjeta.classList.add("card","shadow", "h-100")
-        let imagen=document.createElement("img")
-        imagen.classList.add("img-fluid")
-        imagen.src=usuario.//
+        
+        let nombreUsuario=document.createElement("h5")
+        nombreUsuario.classList.add("text-center")
+        nombreUsuario.textContent=usuario.nombres 
 
-        let nombreProducto=document.createElement("h5")
-        nombreProducto.classList.add("text-center")
-        nombreProducto.textContent=usuario.nombre 
+        let cedulaUsuario=document.createElement("h5")
+        cedulaUsuario.classList.add("text-center")
+        cedulaUsuario.textContent=usuario.cedula 
+
+        let correoUsuario=document.createElement("h5")
+        correoUsuario.classList.add("text-center")
+        correoUsuario.textContent=usuario.correo 
 
 
-        tarjeta.appendChild(imagen)
-        tarjeta.appendChild(nombreProducto)
+        tarjeta.appendChild(nombreUsuario)
+        tarjeta.appendChild(cedulaUsuario)
+        tarjeta.appendChild(correoUsuario)
         columna.appendChild(tarjeta)
         fila.appendChild(columna)
 
